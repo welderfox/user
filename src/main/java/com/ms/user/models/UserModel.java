@@ -2,10 +2,11 @@ package com.ms.user.models;
 
 import java.io.Serializable;
 import java.util.UUID;
-import org.springframework.data.annotation.Id;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,7 +15,7 @@ public class UserModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID userId;
 	private String name;
 	private String email;
@@ -37,7 +38,4 @@ public class UserModel implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
-
 }
