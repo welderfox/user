@@ -7,3 +7,4 @@
 - Java 8 ou superior
 - RabbitMQ
 - PostgreSQL
+- Spring Boot
