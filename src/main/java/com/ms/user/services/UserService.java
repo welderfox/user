@@ -22,7 +22,7 @@ public class UserService {
     @Transactional
     public UserModel save(UserModel userModel)
     {
-        //Implementar post na fila.
+        //Gravando o usuario na base de dados e publicando na fila.
         userRepository.save(userModel);
         userProducer.publishMessageEmail(userModel);
         return userModel;
